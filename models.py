@@ -461,6 +461,7 @@ class Source1(SubjectData):
     CHEM130Reason__Interest = models.NullBooleanField()
     CHEM130Confidence = models.CharField(max_length=2, choices=CONFIDENCERANGE_CHOICES, null=True, blank=True)
     CHEM130GradeConfidence = models.CharField(max_length=2, choices=CONFIDENCERANGE_CHOICES, null=True, blank=True)
+    dist_ID = models.CharField(max_length=20, null=True, blank=True)
     CHEM130Interest = models.CharField(max_length=2, choices=_CHEM13INTEREST_CHOICES, null=True, blank=True)
 
 class EmptySource(SubjectData):
