@@ -7,6 +7,7 @@ from djangotailoring.models import SubjectData
 # Create your models here.
 
 # python ../manage.py makemtsmodel > MODEL.OUT (results go below here)
+# matching version 1650
 
 INT_APCOURSES_CHOICES = (
     ('1', 'Chemistry'),
@@ -394,7 +395,7 @@ class Source1(SubjectData):
     CHEM130Reason__Interest = models.NullBooleanField()
     CHEM130Confidence = models.IntegerField(null=True, blank=True)
     CHEM130GradeConfidence = models.IntegerField(null=True, blank=True)
-    dist_ID = models.CharField(max_length=20, null=True, blank=True)
+    dist_ID = models.TextField(null=True, blank=True)
     CHEM130Interest = models.IntegerField(null=True, blank=True)
     Message_2_Q1 = models.IntegerField(null=True, blank=True)
     Message_2_Q2 = models.IntegerField(null=True, blank=True)
