@@ -7,15 +7,7 @@ from djangotailoring.models import SubjectData
 # Create your models here.
 
 # python ../manage.py makemtsmodel > MODEL.OUT (results go below here)
-# matching version 1650
-
-INT_APCOURSES_CHOICES = (
-    ('1', 'Chemistry'),
-    ('2', 'Biology'),
-    ('3', 'Physics'),
-    ('4', 'Calculus/Statistics'),
-    ('5', 'Other AP/IB Course'),
-)
+# matching version 1652
 
 INT_ATTENDANCE_CHOICES = (
     ('0', 'Never'),
@@ -29,6 +21,14 @@ INT_SLC_CHOICES = (
     ('1', 'Yes'),
     ('0', 'No'),
     ('2', "What's an SLC study group?"),
+)
+
+TEXT_APCOURSE_CHOICES = (
+    ('Chemistry', 'Chemistry'),
+    ('Biology', 'Biology'),
+    ('Physics', 'Physics'),
+    ('Math', 'Calculus/Statistics'),
+    ('Other', 'Other AP/IB Course'),
 )
 
 INT_DISCUSSIONATTENDANCE_CHOICES = (
@@ -320,11 +320,11 @@ class Source1(SubjectData):
     Final_Exam_Score = models.IntegerField(null=True, blank=True)
     CHEM130Friends = models.IntegerField(null=True, blank=True)
     APCourses = models.IntegerField(null=True, blank=True)
-    APCoursesTaken__1 = models.NullBooleanField()
-    APCoursesTaken__2 = models.NullBooleanField()
-    APCoursesTaken__3 = models.NullBooleanField()
-    APCoursesTaken__4 = models.NullBooleanField()
-    APCoursesTaken__5 = models.NullBooleanField()
+    APCoursesTaken__Chemistry = models.NullBooleanField()
+    APCoursesTaken__Biology = models.NullBooleanField()
+    APCoursesTaken__Physics = models.NullBooleanField()
+    APCoursesTaken__Math = models.NullBooleanField()
+    APCoursesTaken__Other = models.NullBooleanField()
     CHEM130SLC = models.IntegerField(null=True, blank=True)
     CHEM130Attendance = models.IntegerField(null=True, blank=True)
     ToDo_01 = models.IntegerField(null=True, blank=True)
