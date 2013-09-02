@@ -175,6 +175,10 @@ TEXT_CHEMREASON_CHOICES = (
     ('Interest', "I'm taking this class because of my interest in chemistry"),
 )
 
+TEXT_GTD_CHOICES = (
+    ('done', '-'),
+)
+
 INT_HOURSSTUDY_CHOICES = (
     ('21', 'More than 20'),
 )
@@ -328,16 +332,6 @@ class Source1(SubjectData):
     APCoursesTaken__Other = models.NullBooleanField()
     CHEM130SLC = models.IntegerField(null=True, blank=True)
     CHEM130Attendance = models.IntegerField(null=True, blank=True)
-    ToDo_01 = models.IntegerField(null=True, blank=True)
-    ToDo_02 = models.IntegerField(null=True, blank=True)
-    ToDo_03 = models.IntegerField(null=True, blank=True)
-    ToDo_04 = models.IntegerField(null=True, blank=True)
-    ToDo_05 = models.IntegerField(null=True, blank=True)
-    ToDo_06 = models.IntegerField(null=True, blank=True)
-    ToDo_07 = models.IntegerField(null=True, blank=True)
-    ToDo_08 = models.IntegerField(null=True, blank=True)
-    ToDo_09 = models.IntegerField(null=True, blank=True)
-    ToDo_10 = models.IntegerField(null=True, blank=True)
     CHEM130DiscussionAttendance = models.IntegerField(null=True, blank=True)
     CHEM130GoalGrade = models.IntegerField(null=True, blank=True)
     YClass26 = models.IntegerField(null=True, blank=True)
@@ -358,6 +352,21 @@ class Source1(SubjectData):
     YClass49 = models.IntegerField(null=True, blank=True)
     YClass50 = models.IntegerField(null=True, blank=True)
     YClass46 = models.IntegerField(null=True, blank=True)
+    GTD_01__done = models.NullBooleanField()
+    GTD_02__done = models.NullBooleanField()
+    GTD_03__done = models.NullBooleanField()
+    GTD_04__done = models.NullBooleanField()
+    GTD_05__done = models.NullBooleanField()
+    GTD_06__done = models.NullBooleanField()
+    GTD_07__done = models.NullBooleanField()
+    GTD_08__done = models.NullBooleanField()
+    GTD_09__done = models.NullBooleanField()
+    GTD_10__done = models.NullBooleanField()
+    GTD_11__done = models.NullBooleanField()
+    GTD_12__done = models.NullBooleanField()
+    GTD_13__done = models.NullBooleanField()
+    GTD_14__done = models.NullBooleanField()
+    GTD_15__done = models.NullBooleanField()
     YClass41 = models.IntegerField(null=True, blank=True)
     YClass32 = models.IntegerField(null=True, blank=True)
     YClass33 = models.IntegerField(null=True, blank=True)
