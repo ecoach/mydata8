@@ -7,7 +7,6 @@ from djangotailoring.models import SubjectData
 # Create your models here.
 
 # python ../manage.py makemtsmodel > MODEL.OUT (results go below here)
-# matching version 1652
 
 INT_ATTENDANCE_CHOICES = (
     ('0', 'Never'),
@@ -62,6 +61,11 @@ INT_CONFIDENCERANGE_CHOICES = (
     ('8', '8'),
     ('9', '9'),
     ('10', 'Extremely Confident<br>10'),
+)
+
+OPT_OUT_CHOICES = (
+    ('0', 'Opt in'),
+    ('1', 'Opt out'),
 )
 
 CTEXT_GENDER_CHOICES = (
@@ -247,6 +251,11 @@ class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    Reg_Enrolled = models.IntegerField(null=True, blank=True)
+    Reg_GPA = models.FloatField(null=True, blank=True)
+    Reg_Gender = models.CharField(max_length=5, null=True, blank=True)
+    Reg_Acad_Level = models.CharField(max_length=20, null=True, blank=True)
+    Signup_Opt_Out = models.IntegerField(null=True, blank=True)
     ChemPrevious = models.IntegerField(null=True, blank=True)
     Math_Confidence = models.IntegerField(null=True, blank=True)
     YClass09 = models.IntegerField(null=True, blank=True)
