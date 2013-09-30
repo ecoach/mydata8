@@ -207,6 +207,14 @@ INT_TODO_CHOICES = (
     ('1', 'Done'),
 )
 
+PRE_EXAM_CONFIDENCE_CHOICES = (
+    ('0', "I'm feeling great! The material comes naturally to me, and I'm getting through the homeworks without too much trouble."),
+    ('1', "I'm feeling okay. Most things are clear to me, but there are one or two topics I know I need to work on."),
+    ('2', "I'm a little behind. There are topics that seem too complicated to me, and I feel like I'm struggling a little through the practice resources."),
+    ('3', "I'm in panic mode! The course material is overwhelming and I could really use some extra help."),
+    ('4', "CHEM 130 has been on my back burner and I haven't really looked at things that much."),
+)
+
 INT_GRADE_DISTRIBUTION_CHOICES = (
     ('8', 'A'),
     ('7', 'A-'),
@@ -251,6 +259,7 @@ class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    Message_3_Q1 = models.IntegerField(null=True, blank=True)
     Reg_Enrolled = models.IntegerField(null=True, blank=True)
     Reg_GPA = models.FloatField(null=True, blank=True)
     Reg_Gender = models.CharField(max_length=5, null=True, blank=True)
