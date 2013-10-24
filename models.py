@@ -259,6 +259,7 @@ class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    PR_ProblemsTried_Exam1 = models.IntegerField(null=True, blank=True)
     Message_3_Q1 = models.IntegerField(null=True, blank=True)
     Reg_Enrolled = models.IntegerField(null=True, blank=True)
     Reg_GPA = models.FloatField(null=True, blank=True)
