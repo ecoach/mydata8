@@ -49,6 +49,13 @@ INT_YESNO_CHOICES = (
     ('0', 'No'),
 )
 
+PREEXAM2_ANSWERS_CHOICES = (
+    ('0', u'I think I\u2019m good to go. I\u2019m comfortable with the material so far.'),
+    ('1', u'I\u2019m fine on the math, but some of the other material is really confusing!'),
+    ('2', u'Orbitals, VSEPR, I get it. But I\u2019m still having trouble with the calculations!'),
+    ('3', u'I\u2019m stuck on a few different things, both math and concepts.'),
+)
+
 INT_CONFIDENCERANGE_CHOICES = (
     ('0', 'Not at all confident<br>0'),
     ('1', '1'),
@@ -382,6 +389,7 @@ class Source1(SubjectData):
     zombi_3_review = models.TextField(null=True, blank=True)
     zombi_3_rewrite = models.TextField(null=True, blank=True)
     zombi_4_rewrite = models.TextField(null=True, blank=True)
+    PreExam2_Q1 = models.IntegerField(null=True, blank=True)
 
 class EmptySource(SubjectData):
     pass
