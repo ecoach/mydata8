@@ -261,12 +261,28 @@ CTEXT_PARENT_ED_CHOICES = (
     ('Professional', 'Professional Degree (MD, JD)'),
 )
 
+_POST_EXAM2_FEELINGS_CHOICES = (
+    ('1', 'Exam 2 was easier because there was less math/more qualitative understanding questions.'),
+    ('2', 'I felt more prepared for Exam 2 because I changed my study habits after Exam 1.'),
+    ('3', 'I felt worse about Exam 2 because I was expecting more math questions.'),
+    ('4', 'The Exam 2 material was new to me, which made the exam more difficult.'),
+    ('5', 'I changed my study habits after Exam 1 but I still did worse on Exam 2!'),
+    ('6', 'I had a hard time seeing how the Exam 2 material was relevant in the big picture.'),
+)
+
 
 class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    Post_Exam2_Feelings__1 = models.NullBooleanField()
+    Post_Exam2_Feelings__2 = models.NullBooleanField()
+    Post_Exam2_Feelings__3 = models.NullBooleanField()
+    Post_Exam2_Feelings__4 = models.NullBooleanField()
+    Post_Exam2_Feelings__5 = models.NullBooleanField()
+    Post_Exam2_Feelings__6 = models.NullBooleanField()
     Exam_1_Satisfaction = models.IntegerField(null=True, blank=True)
+    PR_ProblemsTried_Exam2 = models.IntegerField(null=True, blank=True)
     PR_ProblemsTried_Exam1 = models.IntegerField(null=True, blank=True)
     Message_3_Q1 = models.IntegerField(null=True, blank=True)
     Reg_Enrolled = models.IntegerField(null=True, blank=True)
