@@ -282,6 +282,7 @@ class Source1(SubjectData):
     Post_Exam2_Feelings__5 = models.NullBooleanField()
     Post_Exam2_Feelings__6 = models.NullBooleanField()
     Exam_1_Satisfaction = models.IntegerField(null=True, blank=True)
+    Exam_2_Satisfaction = models.IntegerField(null=True, blank=True)
     PR_ProblemsTried_Exam2 = models.IntegerField(null=True, blank=True)
     PR_ProblemsTried_Exam1 = models.IntegerField(null=True, blank=True)
     Message_3_Q1 = models.IntegerField(null=True, blank=True)
