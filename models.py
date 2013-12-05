@@ -261,7 +261,7 @@ CTEXT_PARENT_ED_CHOICES = (
     ('Professional', 'Professional Degree (MD, JD)'),
 )
 
-_POST_EXAM2_FEELINGS_CHOICES = (
+POSTEXAM2_FEELS_ANSWERS_CHOICES = (
     ('1', 'Exam 2 was easier because there was less math/more qualitative understanding questions.'),
     ('2', 'I felt more prepared for Exam 2 because I changed my study habits after Exam 1.'),
     ('3', 'I felt worse about Exam 2 because I was expecting more math questions.'),
@@ -269,7 +269,6 @@ _POST_EXAM2_FEELINGS_CHOICES = (
     ('5', 'I changed my study habits after Exam 1 but I still did worse on Exam 2!'),
     ('6', 'I had a hard time seeing how the Exam 2 material was relevant in the big picture.'),
 )
-
 
 class Source1(SubjectData):
     # add meta property
