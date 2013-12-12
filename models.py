@@ -80,6 +80,13 @@ CTEXT_GENDER_CHOICES = (
     ('F', 'Female'),
 )
 
+INT_LOGINFREQUENCY_CHOICES = (
+    ('4', 'Multiple times per day'),
+    ('3', 'Every day'),
+    ('2', 'Once or twice weekly'),
+    ('1', 'Almost never'),
+)
+
 CINT_SEMSESTERS_COMPLETED_CHOICES = (
     ('9', 'More than 8 semesters'),
 )
@@ -222,6 +229,15 @@ PRE_EXAM_CONFIDENCE_CHOICES = (
     ('4', "CHEM 130 has been on my back burner and I haven't really looked at things that much."),
 )
 
+POSTEXAM2_FEELS_ANSWERS_CHOICES = (
+    ('1', 'Exam 2 was easier because there was less math/more qualitative understanding questions.'),
+    ('2', 'I felt more prepared for Exam 2 because I changed my study habits after Exam 1.'),
+    ('3', 'I felt worse about Exam 2 because I was expecting more math questions.'),
+    ('4', 'The Exam 2 material was new to me, which made the exam more difficult.'),
+    ('5', 'I changed my study habits after Exam 1 but I still did worse on Exam 2!'),
+    ('6', 'I had a hard time seeing how the Exam 2 material was relevant in the big picture.'),
+)
+
 INT_GRADE_DISTRIBUTION_CHOICES = (
     ('8', 'A'),
     ('7', 'A-'),
@@ -261,19 +277,22 @@ CTEXT_PARENT_ED_CHOICES = (
     ('Professional', 'Professional Degree (MD, JD)'),
 )
 
-POSTEXAM2_FEELS_ANSWERS_CHOICES = (
-    ('1', 'Exam 2 was easier because there was less math/more qualitative understanding questions.'),
-    ('2', 'I felt more prepared for Exam 2 because I changed my study habits after Exam 1.'),
-    ('3', 'I felt worse about Exam 2 because I was expecting more math questions.'),
-    ('4', 'The Exam 2 material was new to me, which made the exam more difficult.'),
-    ('5', 'I changed my study habits after Exam 1 but I still did worse on Exam 2!'),
-    ('6', 'I had a hard time seeing how the Exam 2 material was relevant in the big picture.'),
-)
 
 class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    ExitQ1_AttribQuote = models.IntegerField(null=True, blank=True)
+    ExitQ2_PhotoPermit = models.IntegerField(null=True, blank=True)
+    ExitQ3_ClassReDo = models.TextField(null=True, blank=True)
+    ExitQ4_ExamPrep = models.TextField(null=True, blank=True)
+    ExitQ5_GroupStudy = models.TextField(null=True, blank=True)
+    ExitQ6_ExpectedGrade = models.IntegerField(null=True, blank=True)
+    ExitQ7_EcoachFrequency = models.IntegerField(null=True, blank=True)
+    ExitQ8_PrimaryUse = models.TextField(null=True, blank=True)
+    ExitQ9_GoodBadFeatures = models.TextField(null=True, blank=True)
+    ExitQ10_Misc = models.TextField(null=True, blank=True)
+    Exit_Q11_SurveyTimes = models.TextField(null=True, blank=True)
     Post_Exam2_Feelings__1 = models.NullBooleanField()
     Post_Exam2_Feelings__2 = models.NullBooleanField()
     Post_Exam2_Feelings__3 = models.NullBooleanField()
