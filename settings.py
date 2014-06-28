@@ -18,7 +18,7 @@ django.template.add_to_builtins('django.templatetags.future')
 # globals
 DB_NAME    = 'ecoach8'
 DPROJ_NAME = 'mydata8'
-MPROJ_NAME = 'mts8'
+MPROJ_NAME = 'mts/mts8'
 COACH_NAME = 'Chem 130: Fall 2013'
 COACH_URL = 'coach8'
 COACH_EMAIL = 'ECoachHelpCHEM130@umich.edu'
@@ -26,7 +26,6 @@ COACH_EMAIL = 'ECoachHelpCHEM130@umich.edu'
 from os.path import abspath, dirname, join
 SETTINGS_PATH = abspath(dirname(__file__))
 DIR_PROJ = abspath(join(SETTINGS_PATH, '../')) + '/'
-DIR_NTS = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + "/Static/mts/js/nts/"
 DIR_UPLOAD_DATA = DIR_PROJ + DPROJ_NAME + "/uploads/"
 DIR_DOWNLOAD_DATA = DIR_PROJ + DPROJ_NAME + "/downloads/"
 DIR_MYDATA = DIR_PROJ + DPROJ_NAME + '/'
@@ -37,7 +36,7 @@ URL_SUB = MPROJ_NAME + '/'
 
 MYDATA = 'mydata8'
 
-DATABASE_ROUTERS = ['mycoach.routers.UserRouter', 'mycoach.routers.CommonRouter']
+DATABASE_ROUTERS = ['mytailoring.routers.UserRouter', 'mytailoring.routers.CommonRouter']
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -117,7 +116,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    DIR_PROJ + '/' + DPROJ_NAME + '/' + MPROJ_NAME + '/Static',
+    DIR_PROJ + MPROJ_NAME + '/Static',
     DIR_PROJ + 'static',
 )
 
@@ -177,16 +176,13 @@ INSTALLED_APPS = (
     'south',
     DPROJ_NAME,
     'myselector',
-    'mycoach',
     'mytailoring',
     'mypublisher',
     'myusage',
     'myemailer',
-    'nts',
     'myloader',
     'myexporter',
     'mylogger',
-    'mytournament',
     'djangotailoring',
     'djangotailoring.surveys',
     'djangotailoring.tracking',
@@ -233,7 +229,7 @@ LOGIN_URL = '/coaches/login/'
 
 LOGIN_REDIRECT_URL = '/coaches/'
 
-TAILORING2_PROJECT_ROOT = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + '/'
+TAILORING2_PROJECT_ROOT = DIR_PROJ + MPROJ_NAME + '/'
 
 #TAILORING2_PROJECT_CONFIG = DIR_PROJ + "tailoring2/config.py"
 #or
